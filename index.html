@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculating the size of a box for multiple products</title>
+	<link rel="stylesheet"
+	      href="styles/app.css">
+	<link rel="stylesheet"
+	      href="styles/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+	<a class="d-flex justify-content-center mt-3" href="https://github.com/Bariskau/optimum-box-size-js">
+			<img src="/assets/GitHub-Mark-64px.png">
+	</a>
+	<div id="boxes"
+	     class="row my-4 d-none">
+		<div>
+			<button onclick="location.reload()"
+			        class="btn btn-primary float-end  mt-3">
+				New Calculation
+			</button>
+		</div>
+	</div>
+
+	<div id="box-form"
+	     class="row d-flex justify-content-center align-content-center vh-100">
+		<div class="text-center">
+			<h1>Calculating the size of <br> a box for multiple products</h1>
+		</div>
+		<div class="col-6">
+
+			<form id="form"
+			      class="form-control px-4 py-5">
+				<div id="form-group">
+					<div class="form-group"
+					     id="form-input">
+						<label class="mb-2">Box</label>
+						<div class="row">
+							<div class="col">
+								<input type="number"
+								       id="width"
+								       name="width"
+								       min="0.1"
+								       step="0.01"
+								       required
+								       class="form-control"
+								       placeholder="Enter width">
+							</div>
+							<div class="col">
+								<input type="number"
+								       id="height"
+								       name="height"
+								       min="0"
+								       step="0.01"
+								       required
+								       class="form-control"
+								       placeholder="Enter height">
+							</div>
+							<div class="col">
+								<input type="number"
+								       id="depth"
+								       name="depth"
+								       min="0.1"
+								       step="0.01"
+								       required
+								       class="form-control"
+								       placeholder="Enter depth">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="d-flex justify-content-between">
+					<input class="btn btn-secondary mt-3"
+					       type="button"
+					       name="Add Box"
+					       value="Add Box"
+					       onclick="addBoxInput()"/>
+
+					<button type="submit"
+					        class="btn btn-primary float-end  mt-3">Calculate
+					</button>
+
+				</div>
+			</form>
+
+		</div>
+	</div>
+
+</div>
+
+<script async
+        src="scripts/script.js"></script>
+<script src="scripts/volume-calculator.js"></script>
+</body>
+</html>

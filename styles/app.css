@@ -1,0 +1,136 @@
+/* Box */
+body {
+    background-color: #eeeeee !important;
+}
+:root {
+    --height: 200px;
+    --width: 300px;
+    --depth: 120px;
+}
+
+.box, .box * {
+    transform-style: preserve-3d;
+}
+
+.box {
+    display: inline-flex;
+    height: var(--height);
+    width: var(--width);
+    margin: 100px;
+    position: relative;
+    border: solid 1px rgba(65, 65, 68, 0.18);
+    transform: rotate3d(1, 1, 1, 45deg);
+}
+
+.top {
+    height: var(--depth);
+    width: 100%;
+    bottom: 100%;
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.6);
+    transform: translateY(50%) rotateX(90deg);
+}
+
+.down {
+    height: var(--depth);
+    width: 100%;
+    top: 100%;
+    position: absolute;
+    background-color: rgba(0, 255, 0, 0.6);
+    transform: translateY(-50%) rotateX(90deg);
+}
+
+.right {
+    width: var(--depth);
+    height: 100%;
+    left: 100%;
+    position: absolute;
+    background-color: rgba(128, 128, 0, 0.6);
+    transform: translateX(-50%) rotateY(90deg);
+}
+
+.left {
+    width: var(--depth);
+    height: 100%;
+    right: 100%;
+    position: absolute;
+    background-color: rgba(128, 0, 128, 0.6);
+    transform: translateX(50%) rotateY(90deg);
+}
+
+.aux {
+    width: 100%;
+    height: var(--depth);
+    border: solid 2px red;
+    position: absolute;
+    transform: translateY(-50%) rotateX(-90deg);
+}
+
+.front {
+    height: var(--height);
+    width: 100%;
+    top: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 255, 0.6);
+    transform: rotateX(90deg);
+    transform-origin: center top;
+}
+
+.back {
+    height: var(--height);
+    width: 100%;
+    bottom: 100%;
+    position: absolute;
+    background-color: rgba(0, 128, 128, 0.6);
+    transform: rotateX(-90deg);
+    transform-origin: center bottom;
+}
+
+.card {
+    width: 100% !important;
+    margin-top: 18px;
+    height: max-content;
+    align-items: center;
+}
+
+.dp-text {
+    display: block;
+    position: absolute;
+    top: -60px;
+    left: 65%;
+    transform: rotateX(250deg) rotate(180deg);
+}
+
+.dp-text .span {
+    font-size: 18px
+}
+
+.wd-text {
+    display: block;
+    position: absolute;
+    bottom: -50px;
+    left: 40%;
+}
+
+.wd-text .span {
+    font-size: 14px
+}
+
+.hg-text {
+    display: block;
+    position: absolute;
+    bottom: 0.4em;
+    right: -60px;
+    transform: rotateX(180deg) rotate(-90deg);
+}
+
+.hg-text .span {
+    font-size: 14px
+}
+
+/* Card */
+.card-header {
+    text-align: center;
+    width: 100%;
+    height: 23em !important;
+}
