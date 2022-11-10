@@ -3,6 +3,7 @@
 Boxes of different sizes may need to be put in one box. If you only have one product to box, the size of the box is obvious. But what happens when you need to box more than one product? The project calculates all the box combinations that the multiple box can fit in.
 
 #SS
+
 ![](https://github.com/Bariskau/optimum-box-size-js/raw/main/assets/git_gif.gif)
 
 ## Important note
